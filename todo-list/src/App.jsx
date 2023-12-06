@@ -12,8 +12,7 @@ function App() {
     <Box bgColor='gray.800' >
       <Header />
       <Footer />
-    </Box>
-       
+    </Box> 
     </>
   )
 }
