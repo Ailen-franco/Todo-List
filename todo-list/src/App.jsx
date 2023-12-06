@@ -7,7 +7,6 @@ import TaskManager from "./components/TaskManager";
 
 function App() {
   
-
   return (
     <>
     <Box bgColor='gray.800' >
