@@ -7,7 +7,11 @@ export default function TaskList({ task: { task, id }, tasks, setTasks, checkTas
         checkTask(id);
     };
 
-    
+    const deleteTask = () => {
+        const updatedTasks = tasks.filter((task) => task.id !== id);
+        localStorage.setItem("task", JSON.stringify(updatedTasks));
+        setTasks(updatedTasks);
+    };
 
   return (
     <>
