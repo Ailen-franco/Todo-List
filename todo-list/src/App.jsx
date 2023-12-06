@@ -1,5 +1,6 @@
 import Footer from "./components/Footer"
 import Header from "./components/Header"
+import { Box } from "@chakra-ui/react";
 
 
 
@@ -8,8 +9,10 @@ function App() {
 
   return (
     <>
-    <Header />
-    <Footer />
+    <Box bgColor='gray.800' >
+      <Header />
+      <Footer />
+    </Box>
        
     </>
   )
