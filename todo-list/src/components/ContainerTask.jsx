@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex, List } from "@chakra-ui/react";
 import TaskList from "./TaskList";
 
-export default function ContainerTask({ tasks, setTasks, checkTask }) {
+export default function ContainerTask({ tasks, setTasks, checkTask, setFilteredTasks  }) {
   return (
     <Flex alignItems='center' justifyContent='center' flexDirection='column' bg='gray.800'>
         <List w='50%' color='gray.200' borderColor='gray.700' boxShadow='2xl' p='6' rounded='md' bg='gray.800'>
@@ -11,6 +11,7 @@ export default function ContainerTask({ tasks, setTasks, checkTask }) {
                 tasks={tasks}
                 setTasks={setTasks}
                 checkTask={checkTask}
+                setFilteredTasks={setFilteredTasks}
                 task={task}
                 completed={task.completed}
                 key={task.id}

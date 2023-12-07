@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex } from "@chakra-ui/react";
 import { FaCheck, FaTrash } from "react-icons/fa";
 
-export default function TaskList({ task: { task, id }, tasks, setTasks, checkTask }) {
+export default function TaskList({ task: { task, id }, tasks, setTasks, checkTask, setFilteredTasks }) {
     const filterTask = () => {
         checkTask(id);
     };
@@ -11,6 +11,7 @@ export default function TaskList({ task: { task, id }, tasks, setTasks, checkTas
         const updatedTasks = tasks.filter((task) => task.id !== id);
         localStorage.setItem("task", JSON.stringify(updatedTasks));
         setTasks(updatedTasks);
+        setFilteredTasks(updatedTasks);
     };
 
   return (

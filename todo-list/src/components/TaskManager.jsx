@@ -22,7 +22,7 @@ export default function TaskManager() {
      
         localStorage.setItem("task", JSON.stringify(updatedTasks));
         setAllTasks(updatedTasks);
-        setFilteredTasks(updatedTasks); // Actualizar filteredTasks también aquí
+        setFilteredTasks(updatedTasks);
       };
 
     const handleFilterChange = (e) => {
@@ -59,7 +59,7 @@ export default function TaskManager() {
   return (
     <Container maxW="container.sm" >
         <TaskForm handleSubmit={handleSubmit} handleFilterChange={handleFilterChange} />
-        <ContainerTask tasks={filteredTasks} setTasks={setAllTasks} checkTask={checkTask} />
+        <ContainerTask tasks={filteredTasks} setTasks={setAllTasks} setFilteredTasks={setFilteredTasks} checkTask={checkTask} />
     </Container>
   )
 }
